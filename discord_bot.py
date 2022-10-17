@@ -60,6 +60,6 @@ async def on_message(message):
 
         elif(msg.startswith("offline")):
             await message.channel.send("bye bye")
-            os._exit(1)
+            os._exit(0)
 
 client.run(token)
