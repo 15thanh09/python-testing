@@ -4,7 +4,7 @@ import  fibonacci
 import equation
 import requests
 import json 
-
+import os
 token = 'MTAzMTQ5MjgxNDI3OTgwNzAyNg.G5iwbF.RlClF8qEl6PnXORW6DCU53VrJ7_xllLmL5VXZA'
 client = discord.Client(intents= discord.Intents.all())
 prefix = "!"
@@ -53,9 +53,13 @@ async def on_message(message):
         elif(msg.startswith("dog")): 
             embedMsg = getDogEmbeddedMessage("Here is your dog image", "dog" , 3447003)
             await message.channel.send(embed=embedMsg)
+        
         # elif(msg.startswith("cat")): 
         #     embedMsg = getCatEmbeddedMessage("Here is your cat image", "cat" , 3447003)
         #     await message.channel.send(embed=embedMsg)
 
+        elif(msg.startswith("offline")):
+            await message.channel.send("bye bye")
+            os._exit(1)
 
 client.run(token)
