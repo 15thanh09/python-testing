@@ -25,8 +25,8 @@ class TestFibo(unittest.TestCase):
         self.assertEqual(fibonacci.Fibo(3),3)
         
     #Test case #3: Fibo(2) --> expected: 1 (KỲ VỌNG SAI)
-    def test_fibo_value_at_index_2(self):    
-        self.assertEqual(fibonacci.Fibo(2),1)
+    # def test_fibo_value_at_index_2(self):    
+    #     self.assertEqual(fibonacci.Fibo(2),1)
         
     #Test case #4: Kiểm tra ngoại lệ khi đưa data sai
     #              Fibonacci ko thể nhập index âm
@@ -35,7 +35,7 @@ class TestFibo(unittest.TestCase):
     #              test sẽ pass (ok) | ngược lại: FAIL
     def test_fibo_value_at_index_negative(self):
         with self.assertRaises(Exception):
-            fibonacci.Fibo(5)
+            fibonacci.Fibo(-5)
 
 # unittest.main(verbosity=2) --> Để khởi chạy các test case trong một module
 # cần đặt gọi đến unittest.main() của module đó
