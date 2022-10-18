@@ -5,7 +5,8 @@ import equation
 import requests
 import json 
 import os
-token = 'MTAzMTQ5MjgxNDI3OTgwNzAyNg.G5iwbF.RlClF8qEl6PnXORW6DCU53VrJ7_xllLmL5VXZA'
+token = sys.argv[1]
+# print("token: " + token)
 client = discord.Client(intents= discord.Intents.all())
 prefix = "!"
 def parseInt(str): 
