@@ -54,9 +54,9 @@ async def on_message(message):
             embedMsg = getDogEmbeddedMessage("Here is your dog image", "dog" , 3447003)
             await message.channel.send(embed=embedMsg)
         
-        # elif(msg.startswith("cat")): 
-        #     embedMsg = getCatEmbeddedMessage("Here is your cat image", "cat" , 3447003)
-        #     await message.channel.send(embed=embedMsg)
+        elif(msg.startswith("cat")): 
+            embedMsg = getCatEmbeddedMessage("Here is your cat image", "cat" , 3447003)
+            await message.channel.send(embed=embedMsg)
 
         elif(msg.startswith("offline")):
             await message.channel.send("bye bye")
