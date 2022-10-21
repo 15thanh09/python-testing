@@ -55,6 +55,6 @@ jobs:
                   heroku run bash -a frozen-crag-38197
             - name: run discord_bot.py
               env:
-                  HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+                  DISCORD_API_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
               run: |
-                  python3 discord_bot.py $HEROKU_API_TOKEN
+                  python3 discord_bot.py $DISCORD_API_TOKEN
